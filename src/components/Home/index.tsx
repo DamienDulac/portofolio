@@ -3,12 +3,11 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 export const Home = () => {
+  const title = "Salut ! Moi c'est Damien Dulac";
   return (
     <div className="flex h-screen bg-lime-200 ">
       <div className="flex items-center justify-start gap-10 px-56 flex-col justify-center text-black basis-7/12">
-        <p className="text-6xl tablet:text-sm font-bold">
-          Salut ! Moi c'est Damien Dulac
-        </p>
+        <p className="text-6xl tablet:text-sm font-bold">{title}</p>
         <p className="text-xl font-medium ">
           Je suis développeur front-end depuis 4 ans, et depuis peu développeur
           mobile !
