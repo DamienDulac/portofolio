@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        me: "url('/assets/me.jpg')",
+        "shape-1": "url('/blob.svg')",
       },
     },
     colors: {
@@ -16,6 +16,7 @@ module.exports = {
       white: "#fafafa",
       black: "#171717",
       gray: "#111827",
+      red: "#FF0000",
     },
   },
   plugins: [require("@tailwindcss/typography")],

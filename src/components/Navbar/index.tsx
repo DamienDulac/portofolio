@@ -1,14 +1,13 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import {
-  NavbarEntries,
-  NavbarEntryType,
-  NavbarEntriesType,
-} from "./services/navbar.entries";
+
+import { NavbarEntries } from "./services/navbar.entries";
+
+import type { NavbarEntryType } from "./services/navbar.entries";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="w-full bg-white px-2 sm:px-4 py-2.5 fixed z-20">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <h1 className="font-bold text-2xl text-black">
           Damien<span className="text-orange">.</span>
@@ -16,14 +15,14 @@ export const Navbar = () => {
         <div className="flex md:order-2">
           <button
             type="button"
-            className="border-solid border border-orange bg-orange text-white transition-all duration-500 hover:bg-white hover:text-orange focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="border-solid invisible sm:visible border border-orange bg-orange text-white transition-all duration-500 hover:bg-white hover:text-orange focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Discutons !
           </button>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 text-sm text-orange-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex items-center p-2 text-sm border-orange text-orange-500 rounded-lg md:hidden hover:bg-orange focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-sticky"
             aria-expanded="false"
           >
@@ -61,32 +60,5 @@ export const Navbar = () => {
         </div>
       </div>
     </nav>
-    /*<div className="flex flex-wrap justify-between items-center h-16 px-6">
-      <div>
-        <h1 className="font-bold text-2xl text-black">
-          Damien<span className="text-orange">.</span>
-        </h1>
-      </div>
-
-      <nav>
-        <div className="navbar flex gap-16 space-between items-center font-medium text-xl text-gray-800 ">
-          {NavbarEntries.map(({ label, link }: NavbarEntryType) => (
-            <Link
-              href={link}
-              key={label}
-              className="transition-all duration-200 hover:text-orange text-black"
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
-      </nav>
-      <Link
-        href="/"
-        className="border-solid border border-orange bg-orange px-4 py-1 rounded-lg transition-all duration-500 hover:bg-white hover:text-orange"
-      >
-        <p>Discutons !</p>
-      </Link>
-    </div>*/
   );
 };

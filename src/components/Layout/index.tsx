@@ -8,10 +8,10 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="antialiased flex flex-col bg-white">
+    <>
       <Navbar />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
