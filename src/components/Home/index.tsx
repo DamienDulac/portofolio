@@ -15,7 +15,7 @@ export const Home = () => {
         )}
       >
         <Image
-          className="absolute sm:hidden top-20"
+          className="sm:hidden"
           src="/profil.png"
           alt="Picture of the author"
           width={400}
